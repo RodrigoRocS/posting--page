@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Posting Page - Exemplo de POST</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Posting Page</h1>
+      <p>
+        Simule um post (POST) para a API pública <code>jsonplaceholder</code>.
+      </p>
+    </header>
+
+    <main>
+      <section class="container">
+        <article aria-labelledby="form-title">
+          <h2 id="form-title">Criar novo post</h2>
+          <form id="post-form">
+            <label for="titulo">Título</label>
+            <input
+              id="titulo"
+              name="titulo"
+              type="text"
+              placeholder="Digite o título"
+              required
+            />
+
+            <label for="conteudo">Conteúdo</label>
+            <textarea
+              id="conteudo"
+              name="conteudo"
+              rows="6"
+              placeholder="Escreva aqui o conteúdo do post"
+              required
+            ></textarea>
+
+            <div class="actions">
+              <button id="enviar" type="submit">Publicar</button>
+            </div>
+          </form>
+        </article>
+
+        <aside aria-labelledby="preview-title" class="preview">
+          <h2 id="preview-title">Preview do post enviado</h2>
+          <article class="post-output">
+            <h3 id="renderizador-titulo">Título aparecerá aqui</h3>
+            <p id="renderizador-conteudo">Conteúdo aparecerá aqui</p>
+            <p class="meta" id="renderizador-id" aria-live="polite"></p>
+          </article>
+        </aside>
+      </section>
+    </main>
+
+    <footer>
+      <small
+        >Exemplo usando
+        <a href="https://jsonplaceholder.typicode.com/"
+          >jsonplaceholder</a
+        ></small
+      >
+    </footer>
+
+    <script src="main.js" defer></script>
+  </body>
+</html>
